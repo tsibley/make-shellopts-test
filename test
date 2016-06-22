@@ -1,0 +1,10 @@
+#!/bin/bash
+for target in pipe compound subshell-pipe subshell-compound subshell-subst; do
+    echo "\$ make $target"
+    if make $target; then
+        echo "✔ $target"
+    else
+        echo "✘ $target"
+    fi
+    echo
+done
